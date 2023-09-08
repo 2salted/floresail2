@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection {
+    background-color: #fdd123;
+    color: #fff; 
+}
+::selection {
+    transition: background-color 0.3s ease;
+}
+body {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+.x-container {
+    display: none;
+}
+
+#heroImage {
+    background-image: url(images/mobilemainimg.JPG);
+    height: 100svh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#heroImage2 {
+    background-image: url(images/IMG_4744\ \(2\).JPG);
+    height: 100svh;
+    width: 100vw;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    #heroImage {
+    background-image: url(images/mainimage.JPG);
+    height: 100svh;
+    width: 100vw;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    #heroImage2 {
+        background-image: url(images/IMG_4744\ \(2\).JPG);
+        height: 100svh;
+        width: 100vw;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #topbar {
+        background-color: rgba(10, 51, 73, 0.4);
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    .nav-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        height: 60px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo {
+        height: 60px; /* Adjust the height as needed */
+        transition: transform 0.3s ease;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .logo:hover {
+        transform: scale(1.3);
+    }
+
+    .nav-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-menu li {
+        display: inline-block;
+        margin-right: 50px; /* Adjust the spacing between menu items */
+    }
+    
+    .nav-menu li:last-child {
+        margin-right: 0; /* Remove margin from the last item */
+    }
+    
+    .nav-menu a {
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 1.2px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-menu a:hover {
+        color: #fdd123; /* Change the color on hover */
+    }
+    
+    #spanNum {
+        color: #fdd123;
+    }
+    
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
+    }
+
+    .close-button {
+        display: none;
+    }
+    @media (max-width: 1020px) {
+    #heroImage {
+    background-image: url(images/mobilemainimg.JPG);
+    height: 100svh;
+    width: 100vw;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+            
+    #heroImage2 {
+    background-image: url(images/IMG_4733.JPG);
+    height: 100svh;
+    width: 100vw;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    .x-container {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 999;
+}
+          
+    .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 10px 0;
+    transition: 0.4s;
+}
+          
+    .change .bar1 {
+    transform: translate(0, 15px) rotate(-45deg);
+}
+          
+    .change .bar2 {opacity: 0;}
+          
+    .change .bar3 {
+    transform: translate(0, -15px) rotate(45deg);
+}
+    .nav-menu {
+    display: none;
+}
+
+          /* Add styles for the mobile navigation menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #0a3349;
+    z-index: 0;
+    transition: right 0.3s ease;
+    padding-top: 60px; /* To account for the top bar's height */
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Change to a vertical column layout */
+}
+
+.mobile-menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: #fdd123;
+}
+    }
