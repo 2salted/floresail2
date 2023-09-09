@@ -13,25 +13,9 @@
 body {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
+
 .x-container {
     display: none;
-}
-
-#heroImage {
-    background-image: url(images/mobilemainimg.JPG);
-    height: 100svh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#heroImage2 {
-    background-image: url(images/IMG_4744\ \(2\).JPG);
-    height: 100svh;
-    width: 100vw;
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
     #heroImage {
@@ -47,7 +31,7 @@ body {
         background-image: url(images/IMG_4744\ \(2\).JPG);
         height: 100svh;
         width: 100vw;
-        background-position: 0px 0px;
+        background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -128,27 +112,27 @@ body {
     z-index: -1;
     }
 
-    .close-button {
-        display: none;
+    @media (max-width: 550px) {
+        #heroImage {
+            background-image: url(images/mobilemainimg.JPG);
+            height: 100svh;
+            width: 100vw;
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+        
+            #heroImage2 {
+                background-image: url(images/IMG_4733.JPG);
+                height: 100svh;
+                width: 100vw;
+                background-position: 0px 0px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
     }
     @media (max-width: 1020px) {
-    #heroImage {
-    background-image: url(images/mobilemainimg.JPG);
-    height: 100svh;
-    width: 100vw;
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-            
-    #heroImage2 {
-    background-image: url(images/IMG_4733.JPG);
-    height: 100svh;
-    width: 100vw;
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+   
     .x-container {
     display: inline-block;
     cursor: pointer;
