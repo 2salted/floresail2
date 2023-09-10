@@ -35,6 +35,14 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
     }
+    #heroImage3 {
+        background-image: url(images/IMG_4735.JPG);
+        height: 100vh;
+        width: 100vw;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     #topbar {
         background-color: rgba(10, 51, 73, 0.4);
         padding: 10px 0;
@@ -112,12 +120,113 @@ body {
     z-index: -1;
     }
 
+    .hero-text-container {
+        position: absolute;
+        top: 50%; /* Adjust the vertical position as needed */
+        left: 50%;
+        transform: translate(-58%, -50%);
+        z-index: 2; /* Ensure the text is above the images */
+        color: #0d3b54; /* Set the text color */
+        text-shadow: rgba(0, 0, 0, 0.25) 0px 0px 13px;
+    }
+    #bigtxt {
+        text-transform: uppercase;
+        font-family: "Fira Sans Extra Condensed";
+        letter-spacing: 3px;
+        font-size: 15vw;
+        font-weight: bolder;
+    }
+    #smalltxt {
+        position: relative;
+        top: 40px;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2vw;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    #undertxt {
+        position: relative;
+        bottom: 40px;
+        right: 40px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 1.2vw;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
+        text-align: right;
+    }
+    .yellow-button {
+        display: inline-block;
+        background-color: #ffd735; /* Yellow background color */
+        color:#0d3b54; /* Text color */
+        padding: 15px 25px; /* Padding around the text */
+        border: none; /* Remove border */
+        text-align: center;
+        text-decoration: none; /* Remove underline */
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect - change background color and add shadow */
+    .yellow-button:hover {
+        background-color:#fdd1239d; /* Lighter yellow on hover */
+    }
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: transparent;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    .text-container.show {
+        color: #0d3b54;
+        transform: translate(-58%, -50%);
+    }
+    
+    #bigtxt {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    #smalltxt {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #undertxt {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    #button {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    
+    #button.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
     @media (max-width: 550px) {
         #heroImage {
             background-image: url(images/mobilemainimg.JPG);
             height: 100svh;
             width: 100vw;
-            background-position: 0px 0px;
+            background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
             }
@@ -126,7 +235,15 @@ body {
                 background-image: url(images/IMG_4733.JPG);
                 height: 100svh;
                 width: 100vw;
-                background-position: 0px 0px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #heroImage3 {
+                background-image: url(images/IMG_4748.JPG);
+                height: 100vh;
+                width: 100vw;
+                background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
             }
@@ -167,7 +284,7 @@ body {
     right: -300px; /* Start off-screen */
     width: 250px;
     height: 100%;
-    background-color: #0a3349;
+    background-color: #0a3349ee;
     z-index: 0;
     transition: right 0.3s ease;
     padding-top: 60px; /* To account for the top bar's height */

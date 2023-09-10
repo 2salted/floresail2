@@ -1,20 +1,25 @@
 var image1 = document.getElementById("heroImage");
 var image2 = document.getElementById("heroImage2");
-var isImage1Visible = true;
+var image3 = document.getElementById("heroImage3");
+var currentImage = 1;
 
 function toggleImages() {
-    if (isImage1Visible) {
+    if (currentImage === 1) {
         image1.style.opacity = 0;
         image2.style.opacity = 1;
-    } else {
-        image1.style.opacity = 1;
+        currentImage = 2;
+    } else if (currentImage === 2) {
         image2.style.opacity = 0;
+        image3.style.opacity = 1;
+        currentImage = 3;
+    } else {
+        image3.style.opacity = 0;
+        image1.style.opacity = 1;
+        currentImage = 1;
     }
-    
-    isImage1Visible = !isImage1Visible;
 }
 
-setInterval(toggleImages, 10000); // Switch images every 5 seconds
+setInterval(toggleImages, 10000); // Switch images every 10 seconds
 
 
 function myFunction(x) {
@@ -47,3 +52,23 @@ mobileMenuItems.forEach(function (item) {
     item.addEventListener('click', closeMobileMenu);
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        document.querySelector(".text-container").style.color = "#0d3b54";
+        document.querySelector(".text-container").style.transform = "translate(-58%, -50%)";
+        
+        document.querySelectorAll("#smalltxt, #bigtxt, #undertxt").forEach(function (element, index) {
+            setTimeout(function () {
+                element.style.opacity = "1";
+                element.style.transform = "translateX(0)";
+            }, index * 200);
+        });
+
+        setTimeout(function () {
+            document.querySelector("#button").style.opacity = "1";
+            document.querySelector("#button").style.transform = "translateY(0)";
+        }, 1000);
+    }, 1000);
+});
