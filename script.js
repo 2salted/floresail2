@@ -51,11 +51,10 @@ window.addEventListener("load", function () {
           document.querySelector("#button").style.transform = "translateY(0)";
         }, 1000);
   
-      }, 500); // Adjust the delay if needed
-    }, 1000);
+      }, 800); // Adjust the delay if needed
+    }, 1200);
   });
-
-
+  
 function myFunction(x) {
     x.classList.toggle("change");
 
@@ -85,5 +84,3 @@ var mobileMenuItems = document.querySelectorAll('.mobile-menu a');
 mobileMenuItems.forEach(function (item) {
     item.addEventListener('click', closeMobileMenu);
 });
-
-
