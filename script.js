@@ -26,7 +26,7 @@ function toggleImages() {
 setInterval(toggleImages, 10000); // Switch images every 10 seconds
 */
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
     setTimeout(function () {
       // Hide the preloader by setting its width to 100%
       document.querySelector("#loading-bar").style.width = "100%";
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   });
 
-  
+
 function myFunction(x) {
     x.classList.toggle("change");
 

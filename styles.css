@@ -39,7 +39,7 @@ body {
 }
 
     #heroImage {
-    background-image: url(images/mainimageREDUCED.jpg);
+    background-image: url(images/mainimage.jpg);
     height: 100svh;
     width: 100vw;
     background-position: 0px 0px;
@@ -346,7 +346,7 @@ body {
         }
 
         #heroImage {
-            background-image: url(images/IMG_4748REDUCED.jpg);
+            background-image: url(images/IMG_4748.jpg);
             height: 100svh;
             width: 100vw;
             background-position: center center;
