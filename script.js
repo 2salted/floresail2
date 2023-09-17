@@ -3,6 +3,32 @@ var image2 = document.getElementById("heroImage2");
 var image3 = document.getElementById("heroImage3");
 var bigtxt = document.getElementById("bigtxt");
 var currentImage = 1;
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var heroImage = document.getElementById("heroImage");
+    
+    var options = {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px", // No margin
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    };
+    
+    var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                // Replace the placeholder image with the actual image
+                heroImage.style.backgroundImage = "url(images/mainimage.jpg)";
+                // Unobserve to avoid multiple triggers
+                observer.unobserve(heroImage);
+            }
+        });
+    }, options);
+    
+    // Start observing the hero section
+    observer.observe(heroImage);
+});
+
 /*
 function toggleImages() {
     if (currentImage === 1) {
