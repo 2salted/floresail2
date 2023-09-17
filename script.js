@@ -26,6 +26,36 @@ function toggleImages() {
 setInterval(toggleImages, 10000); // Switch images every 10 seconds
 */
 
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      // Hide the preloader by setting its width to 100%
+      document.querySelector("#loading-bar").style.width = "100%";
+  
+      // After a short delay, hide the preloader container
+      setTimeout(function () {
+        document.querySelector("#preloader").style.display = "none";
+  
+        // Your code to run after the preloader is done loading
+        document.querySelector(".text-container").style.color = "#0d3b54";
+        document.querySelector(".text-container").style.transform = "translate(-50%, -50%)";
+  
+        document.querySelectorAll("#smalltxt, #bigtxt, #undertxt").forEach(function (element, index) {
+          setTimeout(function () {
+            element.style.opacity = "1";
+            element.style.transform = "translateX(0)";
+          }, index * 200);
+        });
+  
+        setTimeout(function () {
+          document.querySelector("#button").style.opacity = "1";
+          document.querySelector("#button").style.transform = "translateY(0)";
+        }, 1000);
+  
+      }, 500); // Adjust the delay if needed
+    }, 1000);
+  });
+
+  
 function myFunction(x) {
     x.classList.toggle("change");
 
@@ -57,22 +87,3 @@ mobileMenuItems.forEach(function (item) {
 });
 
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-        document.querySelector(".text-container").style.color = "#0d3b54";
-        document.querySelector(".text-container").style.transform = "translate(-50%, -50%)";
-        
-        document.querySelectorAll("#smalltxt, #bigtxt, #undertxt").forEach(function (element, index) {
-            setTimeout(function () {
-                element.style.opacity = "1";
-                element.style.transform = "translateX(0)";
-            }, index * 200);
-        });
-
-        setTimeout(function () {
-            document.querySelector("#button").style.opacity = "1";
-            document.querySelector("#button").style.transform = "translateY(0)";
-        }, 1000);
-    }, 1000);
-});
